@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible EzTorrent problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private trackers, magnet links, hashes, local paths or personal data. Foundation cannot download torrents yet.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows edition/build, x64, EzTorrent version and .NET Desktop Runtime/SDK version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include expected and actual behavior and a minimal sanitized example.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Sanitized error text and relevant checks performed.

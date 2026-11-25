@@ -1,0 +1,45 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:c="clr-namespace:EzTorrent.Desktop.Controls" xmlns:l="clr-namespace:EzTorrent.Desktop.Localization">
+  <Style x:Key="CaptionButton" TargetType="c:CaptionButton">
+    <Setter Property="Width" Value="48" /><Setter Property="Height" Value="46" /><Setter Property="FontFamily" Value="Segoe MDL2 Assets" /><Setter Property="FontSize" Value="11" />
+    <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" /><Setter Property="Background" Value="Transparent" /><Setter Property="BorderThickness" Value="0" />
+    <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+    <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="c:CaptionButton">
+      <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="5" Margin="2,3"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+      <ControlTemplate.Triggers>
+        <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Surface" Property="Background" Value="{DynamicResource SubtleFillColorSecondaryBrush}" /></Trigger>
+        <Trigger Property="IsNativeHovered" Value="True"><Setter TargetName="Surface" Property="Background" Value="{DynamicResource SubtleFillColorSecondaryBrush}" /></Trigger>
+        <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="Surface" Property="Background" Value="{DynamicResource SubtleFillColorSecondaryBrush}" /></Trigger>
+        <Trigger Property="IsPressed" Value="True"><Setter TargetName="Surface" Property="Background" Value="{DynamicResource SubtleFillColorTertiaryBrush}" /></Trigger>
+        <Trigger Property="IsNativePressed" Value="True"><Setter TargetName="Surface" Property="Background" Value="{DynamicResource SubtleFillColorTertiaryBrush}" /></Trigger>
+      </ControlTemplate.Triggers>
+    </ControlTemplate></Setter.Value></Setter>
+  </Style>
+  <Style TargetType="c:AppWindow">
+    <Setter Property="Background" Value="{DynamicResource ApplicationBackgroundBrush}" /><Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+    <Setter Property="FontFamily" Value="Segoe UI" /><Setter Property="FontSize" Value="14" />
+    <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="c:AppWindow">
+      <!-- WindowChrome adjusts the template root margin; keep app frame padding on a nested element. -->
+      <Grid Background="{TemplateBinding Background}"><Border x:Name="Frame" Background="{TemplateBinding Background}" BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="10">
+        <Grid><Grid.RowDefinitions><RowDefinition Height="48" /><RowDefinition Height="*" /></Grid.RowDefinitions>
+          <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+            <DockPanel VerticalAlignment="Center" Margin="18,0,12,0" IsHitTestVisible="False">
+              <TextBlock Text="↓" FontSize="21" Foreground="{DynamicResource {x:Static SystemColors.AccentColorBrushKey}}" Margin="0,0,10,0" />
+              <TextBlock Text="{TemplateBinding Title}" FontWeight="SemiBold" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" />
+            </DockPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,0,2,0">
+              <c:CaptionButton x:Name="PART_Minimize" Content="&#xE921;" Style="{StaticResource CaptionButton}" ToolTip="{l:Loc Minimize}" AutomationProperties.Name="{l:Loc Minimize}" />
+              <c:CaptionButton x:Name="PART_Maximize" Content="&#xE922;" Style="{StaticResource CaptionButton}" ToolTip="{l:Loc Maximize}" AutomationProperties.Name="{l:Loc Maximize}" />
+              <c:CaptionButton x:Name="PART_Close" Content="&#xE8BB;" Style="{StaticResource CaptionButton}" ToolTip="{l:Loc CloseWindow}" AutomationProperties.Name="{l:Loc CloseWindow}" />
+            </StackPanel>
+          </Grid>
+          <AdornerDecorator Grid.Row="1"><ContentPresenter /></AdornerDecorator>
+        </Grid>
+      </Border></Grid>
+      <ControlTemplate.Triggers>
+        <Trigger Property="ShowMinimize" Value="False"><Setter TargetName="PART_Minimize" Property="Visibility" Value="Collapsed" /></Trigger>
+        <Trigger Property="ShowMaximize" Value="False"><Setter TargetName="PART_Maximize" Property="Visibility" Value="Collapsed" /></Trigger>
+        <Trigger Property="WindowState" Value="Maximized"><Setter TargetName="PART_Maximize" Property="Content" Value="&#xE923;" /><Setter TargetName="Frame" Property="CornerRadius" Value="0" /><Setter TargetName="Frame" Property="BorderThickness" Value="0" /></Trigger>
+      </ControlTemplate.Triggers>
+    </ControlTemplate></Setter.Value></Setter>
+  </Style>
+</ResourceDictionary>

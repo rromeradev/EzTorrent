@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EzTorrent.Core/EzTorrent.Core.csproj" />
+    <Project Path="src/EzTorrent.Infrastructure/EzTorrent.Infrastructure.csproj" />
+    <Project Path="src/EzTorrent.Desktop/EzTorrent.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/"><Project Path="tests/EzTorrent.Tests/EzTorrent.Tests.csproj" /></Folder>
+</Solution>

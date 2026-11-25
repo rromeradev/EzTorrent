@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a scoped improvement consistent with the roadmap.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the situation and outcome you need.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include alternatives and a concrete acceptance example.
+    validations:
+      required: true
+  - type: input
+    id: milestone
+    attributes:
+      label: Roadmap fit
+      description: Name a milestone or explain why the scope should change. Streaming, search, RSS, plugins, web UI, remote control and cloud are outside v1.

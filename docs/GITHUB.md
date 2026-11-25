@@ -1,0 +1,19 @@
+# GitHub setup and F05 completion
+
+Updated 2026-11-25.
+
+- [Public planning repository](https://github.com/rromeradev/EzTorrent)
+- [Development board](https://github.com/users/rromeradev/projects/4/views/3)
+- [Tasks grouped by milestone](https://github.com/users/rromeradev/projects/4/views/4)
+- [Pinned guide](https://github.com/rromeradev/EzTorrent/issues/1)
+- [Completed F05 review](https://github.com/rromeradev/EzTorrent/issues/6)
+
+The public repository still contains planning only and no Git content or artifacts. The owner authorized the first **local** Foundation commit at F05 completion. Source push, local remote configuration, CI/template upload, branch protection and release publication remain deferred until separately authorized.
+
+The Project contains 43 development tasks plus a separate pinned guide issue. Five Foundation tasks are closed/Done; 38 future tasks remain Todo. Foundation milestone v0.1.0 is closed as a local implementation/review, with no published release. The other seven milestones remain open. No due dates were invented. The board columns use Status (Todo, In Progress, Done); the table groups by Milestone. Native blockers record 77 future prerequisite relationships. Closing F05 does not block local research; E01 / issue #7 is the next planned task, not started by this setup.
+
+F05 supersedes the grid/cards plan: cards only, and a shared app-drawn frame on every app-owned window/dialog. F03, U02, the pinned guide and Project README were updated accordingly. Detailed evidence and platform limits are in F05-REVIEW.md. Restore and Release build succeeded with zero warnings/errors; 20 tests passed.
+
+Issues/Projects are enabled, wiki/discussions disabled, fifteen custom labels configured, guide #1 pinned, private vulnerability reporting enabled, and the repository homepage points to the board. Future merges use squash with branch cleanup. No collaborators, secrets, deploy keys, paid services or publishing automation were added.
+
+The GitHub plugin handled repository/issue reads and issue creation/updates. The authenticated official GitHub CLI complemented administration of Projects, labels, milestones, views and native blockers. Final API checks verified the empty public repository, linked public Project, issue counts/statuses, grouped views and closed Foundation milestone. No application code was uploaded to update planning.
