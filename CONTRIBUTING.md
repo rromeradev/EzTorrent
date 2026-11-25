@@ -14,10 +14,12 @@ Use English for code, comments, documentation, issues and commits. Add user-faci
 
 ## Workflow
 
-Keep `main` stable. Use short-lived `feat/`, `fix/` or `docs/` branches and Conventional Commits when commits are authorized. Follow SemVer. The public GitHub repository contains a planning Project, milestones and issues. Application source remains local; the first Foundation commit is authorized, while source push, remote configuration and releases remain deferred; see docs/GITHUB.md. Do not commit, push, publish or configure external services without the repository owner's explicit request.
+Keep `main` stable. Use short-lived `feat/`, `fix/` or `docs/` branches and Conventional Commits. Follow SemVer. Open a pull request for every change after the initial repository bootstrap. The active `Protect main` ruleset requires the GitHub Actions `build` check against the latest `main`, resolved review conversations and a linear history. Only squash merges are allowed; merged branches are deleted automatically. Force pushes and branch deletion are blocked, with no configured bypass actors. A separate approving reviewer is optional so the solo maintainer can merge a verified pull request. See [GitHub setup](docs/GITHUB.md).
+
+The owner authorized Foundation source publication. Agents still need an explicit task instruction before committing, pushing, publishing releases or configuring external services. Source publication does not authorize a package, installer or beta/stable release.
 
 Pull requests should explain the triggering problem, resulting behavior, validation and practical limits. The Windows workflow restores, builds and tests without publishing. Review dependency licenses and advisories before upgrades; select exact central package versions.
 
 ## Reporting
 
-Use the public planning issues today. The local bug/feature issue forms and pull request template will become available on GitHub after source publication is authorized. Include Windows edition/build, SDK/runtime version, reproduction and a sanitized error description. Do not attach settings or torrent metadata containing personal information. For a security concern, use GitHub private vulnerability reporting as described in SECURITY.md; do not publish sensitive details in issues.
+Use the public bug/feature issue forms and pull request template. Include Windows edition/build, SDK/runtime version, reproduction and a sanitized error description. Do not attach settings or torrent metadata containing personal information. For a security concern, use GitHub private vulnerability reporting as described in SECURITY.md; do not publish sensitive details in issues.

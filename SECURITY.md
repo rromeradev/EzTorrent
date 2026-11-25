@@ -1,6 +1,6 @@
 # Security policy
 
-EzTorrent is an unreleased project. Public GitHub content currently consists of planning only; application source and artifacts have not been published.
+EzTorrent is an unreleased project. Foundation source and planning are public on GitHub; no packages, installer or release have been published.
 
 ## Report a vulnerability privately
 

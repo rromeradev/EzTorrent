@@ -1,6 +1,8 @@
 # Foundation validation and handoff
 
-**F05 review (2026-11-25):** The owner authorized the first local Foundation commit at the end of F05; source publication is still deferred. Current evidence is in [F05-REVIEW.md](F05-REVIEW.md): cards only; shared app-owned frame/dialogs; caption/work-area fixes; 20 tests passing. Earlier grid/table and 16-test statements below are the historical first Foundation handoff.
+**Publication update (2026-11-25):** The owner authorized the first Foundation commit and its GitHub push. Commit `96f0feb63f9f0aaa752131629cc521f759d280a3` is public; [Windows CI](https://github.com/rromeradev/EzTorrent/actions/runs/45674317801) passed restore, Release build and tests. Local verification was repeated successfully: zero build warnings/errors and 20 tests passed. Active `main` rules require PRs and the GitHub Actions `build` check with an up-to-date base, squash/linear history and resolved conversations; force pushes/deletion are blocked and there are no bypass actors. No separate reviewer approval is required for solo development. Effective rules were verified through the branch-rules API. See [GitHub setup](GITHUB.md).
+
+**F05 review (2026-11-25):** Current UI evidence is in [F05-REVIEW.md](F05-REVIEW.md): cards only; shared app-owned frame/dialogs; caption/work-area fixes; 20 tests passing. Earlier grid/table and 16-test statements below are the historical first Foundation handoff.
 
 **Planning update (2026-11-25):** GitHub planning was subsequently configured without commits or source publication. See [GitHub setup](GITHUB.md) for the verified current state. The Foundation handoff below records the original implementation state.
 

@@ -4,7 +4,7 @@ A free, open-source BitTorrent client for Windows, licensed under MIT.
 
 [Public planning](https://github.com/users/rromeradev/projects/4/views/3) · [Project guide](https://github.com/rromeradev/EzTorrent/issues/1) · [GitHub setup](docs/GITHUB.md)
 
-GitHub currently hosts planning only. Application source remains local; the owner authorized the first local Foundation commit; source push, packages and releases remain deferred. See [development plan](docs/DEVELOPMENT-PLAN.md) for the staged task index.
+Foundation source and planning are public on GitHub. The initial Windows build/test workflow passed. Changes to `main` require a pull request and successful CI; see [contributing](CONTRIBUTING.md). Packages and releases remain future work. See [development plan](docs/DEVELOPMENT-PLAN.md) for the staged task index.
 
 
 **Status: 0.1 Foundation, unreleased.** This version opens a native WPF Fluent shell, saves local preferences and uses cards as its only transfer view. It cannot add torrents, connect to peers, download or seed. All transfer collections are genuinely empty. No telemetry is collected and no updater or engine is installed.
