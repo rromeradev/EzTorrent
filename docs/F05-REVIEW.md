@@ -1,6 +1,6 @@
 # F05 — Foundation review
 
-Review date: 2026-11-25. Source publication decision: **deferred**. The owner subsequently authorized the first local Foundation commit. Local remote configuration, source push, uploaded source and releases remain deferred.
+Review date: 2026-11-25. Source publication decision: **authorized and completed** after the initial local review. The owner authorized the first commit, then explicitly requested its GitHub push and branch-policy verification. Packages and releases remain future work.
 
 ## Result and superseding UI decisions
 
@@ -28,4 +28,4 @@ Only the available Windows 11 x64 build was visually tested. Windows 10, a suppo
 
 App-owned dialogs share the same chrome; not every startup/access failure was forced visually in this pass. Picker directory access is asynchronous; an OS/network call can take time to return after cancellation. No functional torrent data exists yet, so populated card performance/virtualization and engine actions remain U02/engine milestones, not verified Foundation functionality.
 
-The initial local commit is authorized. GitHub source upload, CI execution, main rules, templates and installer/release work remain deferred until separate explicit authorization. F05 can close as local review plus an explicit publication decision; closing it does not mean publishing was performed. The public roadmap/guide must reflect the cards-only scope and the completed review.
+The initial commit [`96f0feb`](https://github.com/rromeradev/EzTorrent/commit/96f0feb63f9f0aaa752131629cc521f759d280a3) is public. Its [Windows CI run](https://github.com/rromeradev/EzTorrent/actions/runs/45674317801) passed restore, Release build and tests. The active [Protect main ruleset](https://github.com/rromeradev/EzTorrent/rules/28098342) requires pull requests and the GitHub Actions `build` check, with squash merges and no bypass actors. Templates are available in the published source. Installer/release work remains on the roadmap.

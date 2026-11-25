@@ -5,7 +5,8 @@ This project follows Semantic Versioning. No release has been published.
 ## [Unreleased] — 0.1.0 Foundation
 
 ### Added
-- Public planning Project with eight milestones, 43 scoped tasks, native prerequisite links and a pinned guide; source remains unpublished.
+- Public Foundation source and planning Project with eight milestones, 43 scoped tasks, native prerequisite links and a pinned guide.
+- Active main rules requiring pull requests, successful Windows CI and squash merges, with no force pushes, branch deletion or bypass actors.
 - Local development/GitHub guides, security reporting policy and a prepared pull request template.
 - .NET 10/C# 14 solution with independent Core, Infrastructure, WPF Desktop and xUnit tests.
 - Native Fluent shell with Windows accent, custom caption controls, cards-only transfers and a shared app-owned frame for all windows/dialogs.

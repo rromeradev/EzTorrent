@@ -1,8 +1,8 @@
 # EzTorrent — Development guide
 
-**F05 reviewed (2026-11-25):** Cards are the only transfer view. Every app-owned window/dialog uses the app-drawn frame; no standard Windows title bars, native message boxes or native folder/file dialogs. Caption movement/hover/cancel/work-area behavior was corrected. Local Release build has zero warnings/errors and 20 tests passed. Source publication remains deferred.
+**F05 reviewed (2026-11-25):** Cards are the only transfer view. Every app-owned window/dialog uses the app-drawn frame; no standard Windows title bars, native message boxes or native folder/file dialogs. Caption movement/hover/cancel/work-area behavior was corrected. Local Release build has zero warnings/errors and 20 tests passed. The owner subsequently authorized source publication: the first commit is public, Windows CI passed and `main` protection is active.
 
-EzTorrent is a free, open-source MIT BitTorrent client planned for Windows 10/11 x64. The current Foundation is implemented locally and remains unpublished. This repository currently holds planning only: no application source, builds, installer or release has been uploaded.
+EzTorrent is a free, open-source MIT BitTorrent client planned for Windows 10/11 x64. The Foundation source and planning are public. The shell has no torrent engine yet; no packages, installer or release have been published.
 
 ## Keep the workflow simple
 
@@ -15,7 +15,7 @@ EzTorrent is a free, open-source MIT BitTorrent client planned for Windows 10/11
 
 ## Delivery sequence
 
-1. **v0.1.0 Foundation:** application structure, atomic settings, Fluent shell, localization, tests and docs. Implemented and reviewed locally; source publication is explicitly deferred.
+1. **v0.1.0 Foundation:** application structure, atomic settings, Fluent shell, localization, tests and docs. Implemented, reviewed and published as source; Windows CI passed. No release is published.
 2. **v0.2.0 Torrent Engine:** validate MonoTorrent and integrate safe input, metadata, trackers/discovery, encryption, router mapping, resume and proven protocol versions.
 3. **v0.3.0 Download Management:** confirm selected files, queue, pause/resume/remove, bandwidth limits, real metrics, disk safeguards and seeding.
 4. **v0.4.0 UX:** complete screens, responsive cards, setup/preferences, accessibility and an explicit telemetry decision.
@@ -31,7 +31,7 @@ EzTorrent is a free, open-source MIT BitTorrent client planned for Windows 10/11
 - JSON settings use atomic same-volume replacement. Future Fast Resume remains engine-native state, separate from settings JSON.
 - pt-BR/en-US resources, initial user Windows UI language, light/dark/system themes, cards-only transfers, first-run setup and first-close choice.
 - MIT; do not invent a legal copyright holder, publisher or signing identity.
-- English source, documentation, issues and authorized commits. Conventional Commits and SemVer once code publication is authorized.
+- English source, documentation, issues and authorized commits. Conventional Commits and SemVer; short-lived branches, pull requests and required Windows CI protect `main`.
 
 ## Product safeguards
 
@@ -43,7 +43,7 @@ Targeting Windows 10/11 does not mean every edition/build is supported. Validate
 
 ## Current publication boundary
 
-The owner approved a public planning repository and project only. Keep application code local. The owner authorized the first local Foundation commit at F05 completion. Source push, local remote configuration, artifact uploads, production release automation and beta/stable publication still require a separate explicit instruction. Five Foundation tasks, including the F05 review and publication decision, are complete based on recorded local work and validation; this does not imply shared source or a published release.
+The owner authorized Foundation source publication after completing the local review. The first commit, workflow and issue/PR templates are public, and `main` requires pull requests, successful Windows CI and squash merges. No bypass actors are configured; separate reviewer approval is optional for solo development. Five Foundation tasks are complete. Packages, installers, production release automation and beta/stable releases still need a separate explicit instruction. See [GitHub setup](https://github.com/rromeradev/EzTorrent/blob/main/docs/GITHUB.md) for verified configuration.
 
 Use this guide and the linked milestones/issues as the public planning source of truth. Keep the local ROADMAP and requirements aligned. Decision issues deliberately defer publisher identity, signing, telemetry collection and release policy until evidence and an owner decision are available.
 
@@ -58,10 +58,10 @@ Use this guide and the linked milestones/issues as the public planning source of
 
 ### [v0.1.0 — Foundation](https://github.com/rromeradev/EzTorrent/milestone/1)
 
-- [F01: Bootstrap the three-project application architecture](https://github.com/rromeradev/EzTorrent/issues/2) — verified locally; source unpublished
-- [F02: Persist private application settings atomically](https://github.com/rromeradev/EzTorrent/issues/3) — verified locally; source unpublished
-- [F03: Build the localized Fluent shell and first-run preferences](https://github.com/rromeradev/EzTorrent/issues/4) — verified locally; source unpublished
-- [F04: Establish Foundation tests, documentation and CI scaffolding](https://github.com/rromeradev/EzTorrent/issues/5) — verified locally; source unpublished
+- [F01: Bootstrap the three-project application architecture](https://github.com/rromeradev/EzTorrent/issues/2) — verified; source public
+- [F02: Persist private application settings atomically](https://github.com/rromeradev/EzTorrent/issues/3) — verified; source public
+- [F03: Build the localized Fluent shell and first-run preferences](https://github.com/rromeradev/EzTorrent/issues/4) — verified; source public
+- [F04: Establish Foundation tests, documentation and CI scaffolding](https://github.com/rromeradev/EzTorrent/issues/5) — verified; Windows CI passed
 - [F05: Review Foundation and decide when to publish the source](https://github.com/rromeradev/EzTorrent/issues/6)
 
 ### [v0.2.0 — Torrent Engine](https://github.com/rromeradev/EzTorrent/milestone/2)
@@ -125,7 +125,7 @@ Use this guide and the linked milestones/issues as the public planning source of
 
 ## Next local development step
 
-[E01 — Validate and select the MonoTorrent dependency](https://github.com/rromeradev/EzTorrent/issues/7) is the first planned local engine task after the verified Foundation. This setup does not start implementation. [F05 — Foundation review](https://github.com/rromeradev/EzTorrent/issues/6) is complete; the owner chose to defer source publication. This does not block local research or development. The first local Foundation commit is authorized. No push, source upload or release is authorized by this planning setup.
+[E01 — Validate and select the MonoTorrent dependency](https://github.com/rromeradev/EzTorrent/issues/7) is the first planned engine task after the verified Foundation. This setup does not start engine implementation. [F05 — Foundation review](https://github.com/rromeradev/EzTorrent/issues/6) is complete and the owner subsequently authorized the initial source push. Continue development through scoped branches and pull requests. Packages and releases remain future work.
 
 ## Security reporting
 

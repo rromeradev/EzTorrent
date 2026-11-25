@@ -2,7 +2,7 @@
 
 Track the [development board](https://github.com/users/rromeradev/projects/4/views/3), [milestones](https://github.com/rromeradev/EzTorrent/milestones) and [scoped task index](https://github.com/rromeradev/EzTorrent/issues/1). Public planning does not authorize source publication.
 
-F05 completed the local Foundation review with source publication explicitly deferred. The latest owner decision supersedes the original grid/cards plan: cards only, and app-drawn chrome for every app-owned window/dialog.
+F05 completed the Foundation review. The owner subsequently authorized source publication; the initial commit is public and Windows CI passed. No package or release has been published. The latest UI decision supersedes the original grid/cards plan: cards only, and app-drawn chrome for every app-owned window/dialog.
 
 Versions describe milestones, not promised dates. All milestones after Foundation are unimplemented. Acceptance requires tests and explicit verification; mentioning a capability does not claim engine support.
 
